@@ -1,0 +1,109 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--====== Title ======-->
+    <title>MeritBell</title>
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/customize1.css' %}">
+    <!--====== Animate css ======-->
+   	 <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <!--====== Fontawesome css ======-->
+ 	<link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+    <!--====== Slick css ======-->
+  	<link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/default.css' %}">
+    <!--====== Style css ======-->
+     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+   	<link rel="stylesheet" href="{% static 'assets/css/customstyle.css' %}">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!---------------------search-------------------------->
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!---------------------END search-------------------------->
+    <!-------TABS-------------->
+
+    <!---------END ENDS------------------------------>
+<style>
+    .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+}
+
+
+button.w3-bar-item.w3-button.btn.btn-primary {
+    background: #117a8b;
+}
+</style>
+</head>
+<body>
+{% include "header.html" %}
+<div class="jumbotron text-center">
+    <h6></h6>
+</div>
+<div class="container ">
+<div class="container">
+
+  <div class="row">
+ <div style=" width: 500px; margin: auto;padding: 21px 12px 12px 12px;border: 1px solid #6ba6e1!important;">
+    <div class="col-sm-12">
+      <p class="text-center" >Hi,Please Sign in on World's Best Portal MeritBell.com</p>
+
+       <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+  <div class="form-group">
+    <label for="email"></label>
+<!--    <input type="email" name="email" class="form-control" id="email" placeholder="Email id/Mobile No">-->
+      <input type="text" name="username" class="form-control" id="text" placeholder="username">
+  </div>
+  <div class="form-group">
+    <label for="pwd"></label>
+    <input type="password" name="password" class="form-control" id="pwd" placeholder="Password">
+  </div>
+<div class="text-center">  <input type="submit" class="btn btn-success btn-send" value="Submit"></div>
+</form>
+
+    </div>
+
+<div>
+ {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<!-----------search----------------------------------------------------->
+
+<!-----------search----------------------------------------------------->
+</body>
+</html>
